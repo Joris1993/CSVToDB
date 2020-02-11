@@ -22,13 +22,15 @@ class CSVParser
             Console.WriteLine(ln);
         }
     }
-    public SortedList<int, Queue<String>> parseCSV()
+    public List<List<String>> parseCSV()
     {
+        List<List<String>> list = new List<List<String>>();
         string ln;
         while ((ln = reader.ReadLine()) != null)
         {
-            ln.
+            list.Add(new List<string>(ln.Split(';')));
         }
+        return list;
     }
 
 }
